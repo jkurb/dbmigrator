@@ -6,4 +6,3 @@ then
 else
     php -f dbmigrator.php $@
 fi
-sdf
