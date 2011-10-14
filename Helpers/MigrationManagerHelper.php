@@ -200,6 +200,7 @@ class MigrationManagerHelper
 	{
 		$retVal = null;
 		$output = null;
+		echo "Applying file {$file}\n";
 		exec("mysql --host={$this->host} --password={$this->password} -u {$this->user} {$this->dbname} < {$file} 2>&1", $output, $retVal);
 		if ($retVal !== 0)
 			throw new RuntimeException("File: {$file}\n" . $this->parseConsoleError($output));
