@@ -182,7 +182,7 @@ class CheckCommand extends BaseCommand
 
 	public function getDescription()
 	{
-		return "check <mig1Uid> <mig2Uid> <configPath>  - check delta between two migrations\n"
+		return "check <mig1Uid> <mig2Uid> <configPath>  - Check whether delta between two adjacent migrations is correct\n"
             . "\t<mig1Uid> - first migration id\n"
             . "\t<mig2Uid> - second migration id";
 	}
