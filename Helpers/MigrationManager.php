@@ -16,6 +16,11 @@ require_once 'DirectoryHandler.php';
 
 class MigrationManager
 {
+	/**
+	 * Инкапсулиреут в себе низкоуровневые операции с БД и файловой системой
+	 *
+	 * @var MigrationManagerHelper
+	 */
 	public $dbHelper = null;
 
 	function __construct($host, $user, $password, $dbname)
@@ -96,7 +101,7 @@ class MigrationManager
 	 *
 	 * @param $migrStorage
 	 * @param $comment
-	 * 
+	 *
 	 * @return mixed
 	 */
 	public function buildMigration($migrStorage, $comment)

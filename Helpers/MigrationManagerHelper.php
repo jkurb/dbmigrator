@@ -375,7 +375,7 @@ class MigrationManagerHelper
 		$schemeData = implode("\n", $output);
 
 		// нужно удалить строки типа AUTO_INCREMENT=123
-		$schemeData = preg_replace('/(AUTO_INCREMENT=[\d]+)/si', '', $schemeData);
+		$schemeData = preg_replace('/[\s]?(AUTO_INCREMENT=[\d]+)[\s]?/si', ' ', $schemeData);
 
 		// нужно удалить строки типа /*!50017 DEFINER=`root`@`localhost`*/
 		$schemeData = preg_replace('%/\*![\d]+\sDEFINER.*?\*/%si', '', $schemeData);
