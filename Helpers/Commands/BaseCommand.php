@@ -14,7 +14,14 @@ require_once realpath(dirname(__FILE__)) . '/../MigrationManager.php';
 
 abstract class BaseCommand
 {
+	/**
+	 * Менеджер миграций
+	 *
+	 * @var MigrationManager
+	 */
 	protected $receiver = null;
+
+
 	protected $config = null;
 
 	function __construct($configPath)
